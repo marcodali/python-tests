@@ -83,7 +83,7 @@ class Weather(Resource):
             todayWasRainy = weather[date]
             month, day, year = [int(x) for x in date.split("-")]
             yesterdayWasRainy = weather["%d-%d-%d" % (month, day-1, year)]
-            result = True if todayWasRainy and yesterdayWasRainy == False else False
+            result = todayWasRainy and yesterdayWasRainy == False
         except KeyError:
             return "DATE NOT FOUND", 400
         return jsonify({ "date":date, "was_rainy":result })
