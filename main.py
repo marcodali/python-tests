@@ -19,7 +19,7 @@ class Seasons(Resource):
         return jsonify(seasonOrders)
 
 @ns.route('/weather')
-class AllWeather(Resource):
+class Weathers(Resource):
     def get(self):
         return jsonify(weather)
 
@@ -75,7 +75,7 @@ class Season(Resource):
 
 @ns.route('/weather/<string:date>')
 @ns.doc(params={'date': 'The date'})
-class Season(Resource):
+class Weather(Resource):
     @ns.response(200, 'Success')
     @ns.response(400, 'DATE NOT FOUND')
     def get(self, date):
