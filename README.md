@@ -1,8 +1,9 @@
-Install all dependencies of this project with
+# Python tests
+## Install all dependencies of this project with
 
 pip3 install -r requirements.txt
 
-To run the api in your localhost use the following command
+## To run the api in your localhost use the following command
 
 python3 main.py
 
